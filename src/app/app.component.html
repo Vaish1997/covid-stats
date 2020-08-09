@@ -1,0 +1,11 @@
+<div *ngFor = "let d of data | paginate: config">
+<div class = "example">
+    <p><strong>Country: </strong>{{d.country}}</p>
+    <p><strong>Cases: </strong>{{d.cases}}</p>
+    <p><strong>Today Cases: </strong>{{d.todayCases}}</p>
+    <p><strong>Deaths: </strong>{{d.todayDeaths}}</p>
+    <p><strong>Today Deaths: </strong>{{d.deaths}}</p>
+    <p><strong>recovered: </strong>{{d.recovered}}</p>
+</div>
+</div>
+<pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
