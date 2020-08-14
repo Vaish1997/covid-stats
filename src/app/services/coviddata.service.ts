@@ -13,4 +13,9 @@ export class CoviddataService {
     return this.http.get<any>(url);
 
   }
+
+  getSearch(): Observable<any>{
+    const url = "https://coronavirus-19-api.herokuapp.com/countries/{countryName}";
+    return this.http.get<any>(url);
+  }
 }

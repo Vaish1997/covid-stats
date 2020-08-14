@@ -34,6 +34,14 @@ export class AppComponent {
     this.config.currentPage = event;
   }
 
+  getUsersByCountry(country)
+  {
+    this.coviddata.getSearch().subscribe((data) =>
+    {
+        console.log(data);
+    });
+  }
+
 }
   
 
